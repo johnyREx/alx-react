@@ -1,5 +1,5 @@
  import { Map } from 'immutable';
 
- const getImmutableobject = (Object) => Map(Object);
+ const getImmutableObject = (Object) => Map(Object);
 
- module.exports = getImmutableobject;
+ module.exports = getImmutableObject;
