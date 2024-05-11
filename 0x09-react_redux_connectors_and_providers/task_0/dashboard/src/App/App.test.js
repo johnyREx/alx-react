@@ -1,9 +1,25 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import { MapStateToProps } from './App';
+import { fromJ, fromJS } from 'immutable';
 import { StyleSheetTestUtils } from 'aphrodite';
 import App from './App';
 import { user, logOut} from '../App/AppContext';
 import AppContext from './AppContext';
+
+describe('mapStateToProps', () => {
+	it('returns the correct object when user is logged in', () => {
+		const state = fromJS({
+			isUserLoggedIn: true
+		});
+
+		const expectedProps = {
+			isLoggedIn: true
+		};
+
+		expect(MapStateToProps(state)).toEqual(expectedProps);
+	});
+})
 
 beforeEach(() => {
   StyleSheetTestUtils.suppressStyleInjection();
