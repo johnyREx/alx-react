@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { StyleSheet, css } from 'aphrodite';
 import Header from '../Header/Header';
 import Login from '../Login/Login';
@@ -163,4 +164,10 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    isLoggedIn: state.uiReducer.isLoggedIn 
+  }
+}
+
+export default connect(mapStateToProps)(App);
