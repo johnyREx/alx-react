@@ -86,8 +86,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { displayDrawer, user, logOut, listNotifications } = this.state;
-    const value = { user, logOut };
+    const { user, listNotifications } = this.state;
+    const { isLoggedIn, displayDrawer } = this.props;
 
     return (
       <AppContext.Provider value={value}>
@@ -166,8 +166,9 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-    isLoggedIn: state.uiReducer.isLoggedIn 
-  }
-}
+    isLoggedIn: state.uiReducer.isLoggedIn
+    displayDrawer: state.uiReducer.isNotificationDrawerVisible
+  };
+};
 
 export default connect(mapStateToProps)(App);
