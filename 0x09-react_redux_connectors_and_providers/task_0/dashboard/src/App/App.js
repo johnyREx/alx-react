@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-    isLoggedIn: state.uiReducer.isLoggedIn
+    isLoggedIn: state.uiReducer.isLoggedIn,
     displayDrawer: state.uiReducer.isNotificationDrawerVisible
   };
 };
