@@ -5,6 +5,7 @@
       "check-lint": "lint [0-9]*.js",
       "test": "jest",
       "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
+      "start": "node server.js"
     },
     "devDependencies": {
       "@babel/core": "^7.6.0",
