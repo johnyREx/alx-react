@@ -1,6 +1,6 @@
-import { notificationReducer, initialState } from '../reducers/notificationReducer';
+import { notificationReducer, initialState } from '../../../../task_4/dashboard/src/reducers/notificationReducer';
 import { filterTypeSelected, getNotifications, getUnreadNotifications } from './notificationSelector';
-import { FETCH_NOTIFICATIONS_SUCCESS } from '../actions/notificationActionTypes';
+import { FETCH_NOTIFICATIONS_SUCCESS } from '../../../../task_4/dashboard/src/actions/notificationActionTypes';
 
 describe('notificationSelector', () => {
   let state;
